@@ -1,0 +1,33 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url(image5.jpg);
+    background-size: 150%;
+    background-position: center;
+    
+}
+table,th,td
+{
+    border: 3px black solid;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 20px;
+    font-size: 18px;
+}
+.bill
+{
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-align: center;
+    
+}
+
+.bill h2
+{
+    font-size: 40px;
+    text-decoration: underline;
+}
