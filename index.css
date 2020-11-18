@@ -1,0 +1,33 @@
+body
+{
+    margin: 0;
+	padding: 0;
+    background-image: url(image5.jpg);
+    background-size: 150%;
+	background-position: center;
+    
+}
+.main
+{
+    border:6px black ridge;
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 20px;
+}
+.go
+{
+    text-decoration: none;
+    color: black;
+    border:2px black solid;
+    padding: 10px;
+    background-color: silver;
+    font-size: 20px;
+    
+}
+a:hover
+{
+    color: red;
+}
