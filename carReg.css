@@ -1,0 +1,25 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url(image5.jpg);
+    background-size: 150%;
+    background-position: center;
+    
+}
+
+.reg
+{
+    border: 6px black ridge;
+    width: 455px;
+    height: 305px;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    text-align: center;
+    font-size: 21px;
+}
+.reg label
+{
+    font-weight: bold;
+}
