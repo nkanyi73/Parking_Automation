@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<div class="main">
+	<div class="main" style = "height: 370px;">
 		<center>
 		<h2>WELCOME! PLEASE SELECT AN OPTION BELOW.</h2>
 		<br>
@@ -15,6 +15,11 @@
 		<br>
 		<br>
 		<a href="timeout.php" class="go">Generate Bill</a>
+		<br>
+		<br>
+		<br>
+		<br>
+		<a href="" class="go">Update Prices</a>
 		</center>
 	</div>
 </body>
