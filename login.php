@@ -31,21 +31,7 @@ $password = $_POST['password'];
     } 
  }
 }
-/*include 'connect.php';
-	include 'process.php';
 
-	$con = new DBConnector();
-    $pdo = $con->connectToDB();
-	
-	if(isset($_POST['login'])){
-		
-
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-
-		$login = new Admin($email,$password);
-		echo $login->login($pdo);
-	}*/
 
 ?>
 <!DOCTYPE html>
