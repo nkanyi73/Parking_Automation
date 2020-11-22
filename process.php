@@ -1,11 +1,15 @@
 <?php
 
     class Admin{
-        private $name;
-        private $email;
-        private $password;
-        private $ID;
+        protected $name;
+        protected $email;
+        protected $password;
+        protected $ID;
 
+        function __construct($user, $pass){
+            $this->email =$user;
+            $this->password = $pass;
+        }
         
          public function setID($ID){
             $this->ID = $ID;
@@ -37,10 +41,10 @@
             $password = $this->getPassword();
             $name = $this->getFullName();
             $email = $this->getEmail();
-            $passwordHash = password_hash($password,PASSWORD_DEFAULT);
+           // $passwordHash = password_hash($password,PASSWORD_DEFAULT);
             try {
                 $stmt = $pdo->prepare ('INSERT INTO admin (name,email,password) VALUES(?,?,?)');
-                $stmt->execute([$name,$email,$passwordHash]);
+                $stmt->execute([$name,$email,$password/*$passwordHash*/]);
                 echo '<script>alert("Registration successful")</script>';
                 echo '<script>window.location="login.php"</script>';
             } catch (PDOException $e) {
@@ -48,35 +52,7 @@
             }            
         }
 
-       public function login($pdo){
-        session_start();
-        try{
-            $password = $this->getPassword();
-            $ID = $this->getID();
-            $sql = "SELECT * FROM admin WHERE employeeID=?";
-            $stmt =$pdo->prepare($sql);
-            $stmt->execute([$ID]);
-            $result=$stmt->fetch();
-            $hash = $result['password'];
-            //print_r($result['password']);
-            if(empty($result)){
-                echo '<script>alert("Invalid credentials")</script>';
-                echo '<script>window.location="login.php"</script>';
-            }else{
-                    if (password_verify($password, $hash)) {
-                        $_SESSION['employeeID'] = $result['employeeID'];
-                        echo '<script>alert("Login successful")</script>';
-                        echo '<script>window.location="index.php"</script>';
-                        
-                    }else{
-                        echo '<script>alert("Wrong credentials")</script>';
-                        echo '<script>window.location="login.php"</script>';
-                    }
-                }
-    }catch(Exception $e){
-        return $e->getMessage();
-    }
-}
+       
 }
 
 

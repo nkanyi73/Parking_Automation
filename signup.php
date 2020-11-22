@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $user = new Admin();
+        $user = new Admin($email,$password);
         $user->setFullName($name);
         $user->setEmail($email);
         $user->setPassword($password);
