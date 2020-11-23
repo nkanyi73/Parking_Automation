@@ -158,6 +158,15 @@ class Bill{
 		return $result["time"];
 
 	}
+	public function getNumberPlate($pdo){
+		$licensePlate = $this->getLicensePlate();
+		$sql = "SELECT * FROM billing WHERE license_plate LIKE (?)";
+		$stmt = $pdo-> prepare($sql);
+		$stmt->execute([$licensePlate]);
+		$result=$stmt->fetchAll();
+		return $result;
+		
+	}
 	
 }
 
