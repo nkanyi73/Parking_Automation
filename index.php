@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +20,9 @@
 		<br>
 		<br>
 		<br>
-		<a href="" class="go">Update Prices</a>
-		</center>
+		<a href="viewprice.php" class="go">Update Prices</a>
+		
 	</div>
+
 </body>
 </html>
