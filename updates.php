@@ -21,6 +21,7 @@ include './price.php';
 <html>
 <head>
 	<title>Update price</title>
+	<link rel="stylesheet" type="text/css" href="updates.css">
 </head>
 <body>
 	<?php
@@ -41,7 +42,10 @@ include './price.php';
 			 	//$price->setProductID($_GET['id']);
 			 		foreach ($price->getPricess($pdo) as $row) {
 				?>
+				<div class = "update">
 				<form method="post" action="">
+					<br>
+					<br>
 					<div>
 						<label>New price</label>
 						<input type="number" name="price">
@@ -50,6 +54,7 @@ include './price.php';
 						<input type="submit" name="update">
 					</div>
 				</form>
+					 </div>
 				<?php
 			 }
 		}
