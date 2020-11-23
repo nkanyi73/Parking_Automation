@@ -79,54 +79,56 @@ class Bill{
 		$result2=$stmt2->fetch();
 		//echo $result2["license_plate"];
 		if($result['time_spent'] < 60){
-			$sql3 = "SELECT price FROM price WHERE product_id = (?)";
+			$sql3 = "SELECT * FROM price WHERE product_id = (?)";
 			$stmt3 =$pdo->prepare($sql3);
 			$stmt3->execute([3]);
 			$result3=$stmt3->fetch();
 			$sql = "INSERT INTO billing (product_ID,ticket_no,duration,price,license_plate) VALUES (?,?,?,?,?)";
 			$stmt =$pdo->prepare($sql);
-			$stmt->execute([3,$ticketNo,$result["time_spent"],$result3,$result2["license_plate"]]);
+			$stmt->execute([3,$ticketNo,$result["time_spent"],$result3["price"],$result2["license_plate"]]);
 		}else if(($result['time_spent'] > 60) && ($result['time_spent'] < 120)){
-			$sql3 = "SELECT price FROM price WHERE product_id = (?)";
+			$sql3 = "SELECT * FROM price WHERE product_id = (?)";
 			$stmt3 =$pdo->prepare($sql3);
 			$stmt3->execute([4]);
 			$result3=$stmt3->fetch();
 			$sql =  "INSERT INTO billing (product_ID,ticket_no,duration,price,license_plate) VALUES (?,?,?,?,?)";
 			$stmt =$pdo->prepare($sql);
-			$stmt->execute([4,$ticketNo,$result["time_spent"],$result3,$result2["license_plate"]]);
+			$stmt->execute([4,$ticketNo,$result["time_spent"],$result3["price"],$result2["license_plate"]]);
 		}else if(($result['time_spent'] > 120) && ($result['time_spent'] < 240)){
-			$sql3 = "SELECT price FROM price WHERE product_id = (?)";
+			$sql3 = "SELECT * FROM price WHERE product_id = (?)";
 			$stmt3 =$pdo->prepare($sql3);
 			$stmt3->execute([7]);
 			$result3=$stmt3->fetch();
 			$sql =  "INSERT INTO billing (product_ID,ticket_no,duration,price,license_plate) VALUES (?,?,?,?,?)";
 			$stmt =$pdo->prepare($sql);
-			$stmt->execute([7,$ticketNo,$result["time_spent"],$result3,$result2["license_plate"]]);
+			$stmt->execute([7,$ticketNo,$result["time_spent"],$result3["price"],$result2["license_plate"]]);
 		}else if(($result['time_spent'] > 240) && ($result['time_spent'] < 360)){
-			$sql3 = "SELECT price FROM price WHERE product_id = (?)";
+
+			$sql3 = "SELECT * FROM price WHERE product_id = (?)";
 			$stmt3 =$pdo->prepare($sql3);
 			$stmt3->execute([8]);
 			$result3=$stmt3->fetch();
+			//echo $result3['price'];
 			$sql =  "INSERT INTO billing (product_ID,ticket_no,duration,price,license_plate) VALUES (?,?,?,?,?)";
 			$stmt =$pdo->prepare($sql);
-			$stmt->execute([8,$ticketNo,$result["time_spent"],$result3,$result2["license_plate"]]);
+			$stmt->execute([8,$ticketNo,$result["time_spent"],$result3["price"],$result2["license_plate"]]);
 		}
 		else if(($result['time_spent'] > 240) && ($result['time_spent'] < 360)){
-			$sql3 = "SELECT price FROM price WHERE product_id = (?)";
+			$sql3 = "SELECT * FROM price WHERE product_id = (?)";
 			$stmt3 =$pdo->prepare($sql3);
 			$stmt3->execute([13]);
 			$result3=$stmt3->fetch();
 			$sql =  "INSERT INTO billing (product_ID,ticket_no,duration,price,license_plate) VALUES (?,?,?,?,?)";
 			$stmt =$pdo->prepare($sql);
-			$stmt->execute([13,$ticketNo,$result["time_spent"],$result3,$result2["license_plate"]]);
+			$stmt->execute([13,$ticketNo,$result["time_spent"],$result3["price"],$result2["license_plate"]]);
 		}else{
-			$sql3 = "SELECT price FROM price WHERE product_id = (?)";
+			$sql3 = "SELECT * FROM price WHERE product_id = (?)";
 			$stmt3 =$pdo->prepare($sql3);
 			$stmt3->execute([14]);
 			$result3=$stmt3->fetch();
 			$sql =  "INSERT INTO billing (product_ID,ticket_no,duration,price,license_plate) VALUES (?,?,?,?,?)";
 			$stmt =$pdo->prepare($sql);
-			$stmt->execute([14,$ticketNo,$result["time_spent"],$result3,$result2["license_plate"]]);
+			$stmt->execute([14,$ticketNo,$result["time_spent"],$result3["price"],$result2["license_plate"]]);
 		}
 	}
 	public function getBill($pdo){
