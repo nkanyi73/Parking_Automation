@@ -19,7 +19,7 @@
 		<br>
 		<br>
 		<br>
-		<a href="" class="go">Update Prices</a>
+		<a href="updates.php" class="go">Update Prices</a>
 		</center>
 	</div>
 </body>

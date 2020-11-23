@@ -10,8 +10,11 @@ include './price.php';
 <html>
 <head>
 	<title>Update price</title>
+	<link rel="stylesheet" type="text/css" href="viewprice.css">
 </head>
 <body>
+	<div class="price">
+	<h2>PRICES</h2>
 	<table>
 		<thead>
 			<th>Product ID</th>
@@ -37,5 +40,6 @@ include './price.php';
 		</tbody>
 	</table>
 	</table>
+	</div>
 </body>
 </html>
