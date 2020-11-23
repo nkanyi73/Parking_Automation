@@ -5,6 +5,7 @@ include './price.php';
 	$con = new DBConnector();
 	$pdo = $con->connectToDB();
 
+	
 	$price = new price();
 	$id = $_GET['id'];
 	$price->setProductID($_GET['id']);
