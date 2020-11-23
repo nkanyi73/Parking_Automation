@@ -30,3 +30,24 @@ table,th,td
     font-size: 40px;
     text-decoration: underline;
 }
+.view
+{
+    text-decoration: none;
+    border: 1px black solid;
+    padding: 10px;
+    background-color: grey;
+    color: black;
+
+}
+a:hover
+{
+    color: red;
+}
+.edit
+{
+    text-decoration: none;
+    border: 1px black solid;
+    padding: 10px;
+    background-color: grey;
+    color: black;
+}

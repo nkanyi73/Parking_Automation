@@ -31,7 +31,7 @@ include './price.php';
 			<td style="border-style: solid;">'.$row["time_in"].'</td>
 			<td style="border-style: solid;">'.$row["time_out"].'</td>
 			<td style="border-style: solid;">'.$row["price"].'</td>
-			<td style="border-style: solid;"><a href = updates.php?id='.$row["product_id"].'&typ=view>View</a>|<a href=updates.php?id='.$row["product_id"].'&typ=edit>Edit</a></td>
+			<td style="border-style: solid;"><a class = "view" href = updates.php?id='.$row["product_id"].'&typ=view>View</a>|<a class = "edit" href=updates.php?id='.$row["product_id"].'&typ=edit>Edit</a></td>
 			</tr>';
 
 		}
