@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<div class="main" style = "height: 370px;">
+	<div class="main" style = "height: 470px; top: 15%;">
 		<center>
 		<h2>WELCOME! PLEASE SELECT AN OPTION BELOW.</h2>
 		<br>
@@ -21,6 +21,11 @@
 		<br>
 		<br>
 		<a href="viewprice.php" class="go">Update Prices</a>
+		<br>
+		<br>
+		<br>
+		<br>
+		<a href="logout.php" class="go">Log Out</a>
 		
 	</div>
 
